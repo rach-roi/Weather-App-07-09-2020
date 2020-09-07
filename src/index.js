@@ -16,6 +16,12 @@ function displayTempCurrentLocation(response) {
   let maxTemp = document.querySelector("#max-temperature");
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
 
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = `${response.data.wind.speed}`;
+
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `${response.data.main.humidity}`;
+
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${currentLocation}, ${country}`;
 }
@@ -78,6 +84,12 @@ function displayTemp(response) {
 
   let maxTemp = document.querySelector("#max-temperature");
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
+
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = `${response.data.wind.speed}`;
+
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `${response.data.main.humidity}`;
 
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
