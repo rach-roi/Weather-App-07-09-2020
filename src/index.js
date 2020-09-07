@@ -5,7 +5,10 @@ function displayTempCurrentLocation(response) {
   let country = response.data.sys.country;
   let temp = response.data.main.temp;
   let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = `${temp}`;
+  currentTemperature.innerHTML = `${Math.round(temp)}`;
+
+  let description = document.querySelector("#description");
+  description.innerHTML = `${response.data.weather[0].description}`;
 
   let minTemp = document.querySelector("#min-temperature");
   minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}° |`;
