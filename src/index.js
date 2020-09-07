@@ -7,6 +7,12 @@ function displayTempCurrentLocation(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temp}`;
 
+  let minTemp = document.querySelector("#min-temperature");
+  minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}° |`;
+
+  let maxTemp = document.querySelector("#max-temperature");
+  maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
+
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${currentLocation}, ${country}`;
 }
