@@ -17,10 +17,10 @@ function displayTempCurrentLocation(response) {
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
 
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `${response.data.wind.speed}`;
+  humidity.innerHTML = `${response.data.main.humidity}`;
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `${response.data.main.humidity}`;
+  wind.innerHTML = `${response.data.wind.speed}`;
 
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${currentLocation}, ${country}`;
@@ -86,10 +86,10 @@ function displayTemp(response) {
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
 
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `${response.data.wind.speed}`;
+  humidity.innerHTML = `${response.data.main.humidity}`;
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `${response.data.main.humidity}`;
+  wind.innerHTML = `${response.data.wind.speed}`;
 
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
