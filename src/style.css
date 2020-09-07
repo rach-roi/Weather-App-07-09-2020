@@ -1,0 +1,122 @@
+body {
+  margin-top: 60px;
+}
+
+.container {
+  margin: 20px auto;
+  min-width: 320px;
+  max-width: 650px;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 5px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 20px 50px 40px 50px;
+}
+
+.current-location-button {
+  color: white;
+  padding: 3px 9px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  border-radius: 3px;
+  border: none;
+  background: #2e83dd;
+}
+.city-name {
+  color: rgb(34, 134, 201);
+  padding: 15px 0 0 10px;
+}
+
+.current-temp-line {
+  padding: 30px 10px 10px;
+  text-align: center;
+  color: rgb(80, 169, 228);
+}
+
+.current-temperature {
+  font-size: 2.2em;
+  position: relative;
+  bottom: 7px;
+}
+
+.celsius {
+  position: relative;
+  bottom: 20px;
+}
+
+.celsius:hover {
+  cursor: pointer;
+}
+
+.fahrenheit {
+  position: relative;
+  bottom: 20px;
+}
+
+.fahrenheit:hover {
+  cursor: pointer;
+}
+
+.units {
+  position: relative;
+  top: -20px;
+}
+
+.min-temperature,
+.max-temperature {
+  position: relative;
+  bottom: 16px;
+  font-size: larger;
+}
+
+.currentDay {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.currentTime {
+  font-size: larger;
+}
+
+.future-temp {
+  text-align: center;
+}
+
+.max-temperature,
+.max-future-temperature {
+  font-weight: bold;
+  font-size: larger;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.humidityWindList {
+  list-style: none;
+}
+
+.tomorrow,
+.tomorrow-1,
+.tomorrow-2,
+.tomorrow-3,
+.tomorrow-4 {
+  padding: 15px 10px;
+  border-radius: 4px;
+  margin: 3px;
+  background-image: linear-gradient(to top, #d2e4f5 0%, white 100%);
+  color: rgb(26, 79, 114);
+}
+
+.tomorrow:hover,
+.tomorrow-1:hover,
+.tomorrow-2:hover,
+.tomorrow-3:hover,
+.tomorrow-4:hover {
+  box-shadow: 0.75px 0.75px 0.75px 0.75px rgba(0, 0, 255, 0.2);
+  cursor: pointer;
+}
+
+.source-code-link {
+  text-align: center;
+}
