@@ -20,7 +20,8 @@ function displayTempCurrentLocation(response) {
   humidity.innerHTML = `${response.data.main.humidity}`;
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `${response.data.wind.speed}`;
+  let windKm = response.data.wind.speed * 3.6;
+  wind.innerHTML = `${Math.round(windKm)}`;
 
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${currentLocation}, ${country}`;
@@ -89,7 +90,8 @@ function displayTemp(response) {
   humidity.innerHTML = `${response.data.main.humidity}`;
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `${response.data.wind.speed}`;
+  let windKm = response.data.wind.speed * 3.6;
+  wind.innerHTML = `${Math.round(windKm)}`;
 
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
