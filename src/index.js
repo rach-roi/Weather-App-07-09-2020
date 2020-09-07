@@ -62,7 +62,13 @@ formatDate(currentDateTime);
 function displayTemp(response) {
   let temp = response.data.main.temp;
   let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = `${temp}`;
+  currentTemperature.innerHTML = `${Math.round(temp)}`;
+
+  let minTemp = document.querySelector("#min-temperature");
+  minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}° |`;
+
+  let maxTemp = document.querySelector("#max-temperature");
+  maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
 
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
@@ -73,7 +79,6 @@ function displayTemp(response) {
 
   let description = document.querySelector("#description");
   description.innerHTML = `${response.data.weather[0].description}`;
-  console.log(description);
 }
 
 function search(city) {
